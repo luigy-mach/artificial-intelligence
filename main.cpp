@@ -41,6 +41,13 @@ void update_w(double w1,double w2){
 
 
 
+void foo(int *pInt){
+	int * p = pInt;
+	cout<<pInt<<endl;
+}
+
+void (*pfoo)(int *pInt);
+
 
 int main(){
  i0[0]=1; i0[1]=0; i0[2]=0;
@@ -61,14 +68,10 @@ int main(){
  temp[2]=1;
  temp[3]=0;	
 
-
-
-
- int nlearn=6;
- for(int i=0;i<nlearn;i++){
-	
- }
-
+ int * pInt=NULL;
+ cout<<pInt<<endl;
+ pfoo=&foo;
+ pfoo(pInt);
 
 
  return 0;
